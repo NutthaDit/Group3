@@ -52,7 +52,7 @@ const localeList = ref([
 //     label:"CNY",
 //   }
 // ]);
-
+//test
 const updateLocale = (event) => {
   locale.value = event.value.code;
   console.log(event.value);
