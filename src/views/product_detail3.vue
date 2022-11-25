@@ -31,7 +31,7 @@
                 <h2>{{t('price')}}</h2>
             </div>
             <div style="text-align: left">
-                <Button class="p-button-google p-3" aria-label="Purchase" @click="pushDataDetail1()">
+                <Button class="p-button-google p-3" aria-label="Purchase" @click="pushDataDetail3()">
                 <i class="pi pi-shopping-cart px-2"></i>
                 <span class="px-3">Purchase</span>
             </Button>
@@ -68,9 +68,9 @@ const dataDetail3 = ref([
     price: 10
 }
 ])
-
 const pushDataDetail3 = () =>{
-    console.log(dataDetail3.value)
+    console.log(dataDetail3.value);
+    alert('Success');
 }
 </script>
 
