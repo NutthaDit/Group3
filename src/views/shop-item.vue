@@ -32,7 +32,7 @@
               top: 50px;
             "
           >
-            <div class="price">THB 100</div>
+            <div class="price">{{t('price')}} : {{t('showPrice')}}</div>
           </div>
         </template>
       </CardComponent>
@@ -66,7 +66,7 @@
               top: 50px;
             "
           >
-            <div class="price">THB 100</div>
+            <div class="price">{{t('price')}} : {{t('showPrice')}}</div>
           </div>
         </template>
       </CardComponent>
@@ -99,7 +99,7 @@
               top: 50px;
             "
           >
-            <div class="price">THB 100</div>
+            <div class="price">{{t('price')}} : {{t('showPrice')}}</div>
           </div>
 
           

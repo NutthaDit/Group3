@@ -33,7 +33,7 @@
                 <SelectButton v-model="selectedSize" :options="sizes" aria-labelledby="single" />
             </div>
             <div style="text-align: left">
-                <h2>{{t('price')}}</h2>
+                <h2>{{t('price')}} : {{t('showPrice')}}</h2>
             </div>
             <div style="text-align: left">
                 <Button class="p-button-google p-3" aria-label="Purchase" @click="pushDataDetail1()">
