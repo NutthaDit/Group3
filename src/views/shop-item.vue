@@ -56,7 +56,7 @@
               top: 10px;
             "
           >
-            <ButtonComponent icon="pi pi-shopping-cart" class="p-button-raised button" />
+            <ButtonComponent icon="pi pi-shopping-cart" class="p-button-raised button" @click="goToDetai2"/>
           </div>
 
           <div
@@ -89,7 +89,7 @@
               top: 10px;
             "
           >
-            <ButtonComponent icon="pi pi-shopping-cart" class="p-button-raised button" />
+            <ButtonComponent icon="pi pi-shopping-cart" class="p-button-raised button" @click="goToDetai3" />
           </div>
 
           <div
@@ -120,6 +120,12 @@ const router = useRouter();
 
 const goToDetail = () => {
   router.push("/detail1");
+}
+const goToDetai2 = () => {
+  router.push("/detail2");
+}
+const goToDetai3 = () => {
+  router.push("/detail3");
 }
 </script>
 
