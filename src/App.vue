@@ -98,7 +98,6 @@ const items = ref([]);
         </template>
         <template #end>
           <div class="flex">
-            <div style="display:block">
               <span>
                 <img
                   src="./assets/image/money.png"
@@ -116,17 +115,14 @@ const items = ref([]);
                   @change="currencyLocale"
                 />
               </span>
-            </div>
-
-            <div class="pl-5">
-              <span>
+              <span class="pl-5">
                 <img
                   src="./assets/image/language.png"
                   alt=""
                   style="height: 40px"
                 />
               </span>
-              <span class="pl-2 font-white">
+              <span class="pl-2">
                 <DropdownComponent
                   :options="localeList"
                   v-model="localeCurrent"
@@ -136,7 +132,6 @@ const items = ref([]);
                   @change="updateLocale"
                 />
               </span>
-            </div>
           </div>
         </template>
       </MenubarComponent>
