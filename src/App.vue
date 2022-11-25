@@ -87,12 +87,14 @@ const items = ref([]);
     <div class="menu">
       <MenubarComponent :model="items">
         <template #start>
+          <router-link to="/">
           <img
             alt="logo"
             src="../src/assets/image/Klothes_logo1.png"
             height="40"
             class="mr-2"
-          />
+          /></router-link>
+          
         </template>
         <template #end>
           <div class="flex">
