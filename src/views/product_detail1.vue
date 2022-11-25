@@ -14,7 +14,7 @@
                 style="text-align: center; padding: 0px; margin-top: 20px"
                 class="pt-0"
             >
-                <p style="margin: 0px">{{t('description')}}</p>
+                <p class="p-2" style="margin: 10px">{{t('description')}} : {{t('description1')}}</p>
             </div>
         </div>
 

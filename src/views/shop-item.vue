@@ -43,7 +43,7 @@
         <template #title
           ><div style="text-align: center">
             <p style="margin: 0px">{{t('dresses')}}</p><br>
-            <img src="../assets/image/product2/Klothes2-1.png" alt="cat" style="width: 70%" />
+            <img src="../assets/image/product2/Klothes2-1.png" alt="dresses" style="width: 70%" />
           </div>
         </template>
         <template #content>
@@ -77,7 +77,7 @@
         <template #title
           ><div style="text-align: center">
             <p style="margin: 0px">{{t('polo')}}</p><br>
-            <img src="../assets/image/product3/Klothes3-1.png" alt="cat" style="width: 70%" />
+            <img src="../assets/image/product3/Klothes3-1.png" alt="Polo shirt" style="width: 70%" />
           </div>
         </template>
         <template #content>

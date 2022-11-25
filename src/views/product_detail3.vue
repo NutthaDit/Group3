@@ -1,20 +1,18 @@
 <template>
     <div style="padding-left: 5%">
-        <h1>{{t('t-shirt')}}</h1>
+        <h1>{{t('polo')}}</h1>
     </div>  
     <div class="flex">
         <div class="col-6">
             <div style="text-align: center">
-                <!-- <img :src="img" alt="t-shirt" style="width: 70%" /> -->
-                <!-- <img src="../assets/image/product1/Klothes1-1.png" alt="t-shirt" style="width: 70%" /> -->
-                <img v-if="selectedColor" :src="require('@/assets/image/product1/' + selectedColor.src)" :alt="selectedColor.alt" style="width: 70%"/>
-                <img v-else :src="require('@/assets/image/product1/Klothes1-1.png')" alt="t-shirt-white" style="width: 70%"/>
+                <img v-if="selectedColor" :src="require('@/assets/image/product3/' + selectedColor.src)" :alt="selectedColor.alt" style="width: 70%"/>
+                <img v-else :src="require('@/assets/image/product3/Klothes3-1.png')" alt="polo-white" style="width: 70%"/>
             </div>
             <div
                 style="text-align: center; padding: 0px; margin-top: 20px"
                 class="pt-0"
             >
-                <p style="margin: 0px">{{t('description')}}</p>
+            <p class="p-2" style="margin: 10px">{{t('description')}} : {{t('description3')}}</p>
             </div>
         </div>
 
@@ -54,55 +52,25 @@ const { t } = useI18n();
 const selectedColor = ref();
 const colors = ref([
             {name: t('white'), 
-            code: 'K1-White',
-            src: "Klothes1-1.png",
-            alt: "t-shirt-white"
-        },
-            {name: t('pink'), 
-            code: 'K1-Pink',
-            src: "Klothes1-2.png",
-            alt: "t-shirt-pink"
-        },
-            {name: t('purple'), 
-            code: 'K1-Purple',
-            src: "Klothes1-3.png",
-            alt: "t-shirt-purple"
-        },
-            {name: t('cream'), 
-            code: 'K1-Cream',
-            src: "Klothes1-4.png",
-            alt: "t-shirt-cream"
-        },
-            {name: t('black'), 
-            code: 'K1-Black',
-            src: "Klothes1-5.png",
-            alt: "t-shirt-black"
-        },
-            {name: t('green'), 
-            code: 'K1-Green',
-            src: "Klothes1-6.png",
-            alt: "t-shirt-green"
-        },
-            {name: t('navy'), 
-            code: 'K1-Navy',
-            src: "Klothes1-7.png",
-            alt: "t-shirt-navy"
+            code: 'K3-White',
+            src: "Klothes3-1.png",
+            alt: "polo-white"
         }
         ]);
 
 const selectedSize = ref('XS');
 const sizes = ref(['XS', 'S' ,'M' ,'L' ,'XL']);
 
-const dataDetail1 = ref([
-    {name: t('t-shirt'),
+const dataDetail3 = ref([
+    {name: t('polo'),
     color: selectedColor.name,
     size: selectedSize,
     price: 10
 }
 ])
 
-const pushDataDetail1 = () =>{
-    console.log(dataDetail1.value)
+const pushDataDetail3 = () =>{
+    console.log(dataDetail3.value)
 }
 </script>
 
