@@ -23,7 +23,7 @@
                 <h2>{{t('color')}}</h2>
                 <Dropdown v-model="selectedColor" :options="colors" optionLabel="name"  :placeholder="t('selectAColor')" />
                 <!-- optionValue="name" -->
-                <p>{{selectedColor}}</p>
+                <!-- <p>{{selectedColor}}</p> -->
             </div>
             <div style="text-align: left">
                 <h2>{{t('size')}}</h2>
@@ -33,7 +33,7 @@
                 <h2>{{t('price')}}</h2>
             </div>
             <div style="text-align: left">
-                <Button class="p-button-google p-3" aria-label="Purchase">
+                <Button class="p-button-google p-3" aria-label="Purchase" @click="pushDataDetail1()">
                 <i class="pi pi-shopping-cart px-2"></i>
                 <span class="px-3">Purchase</span>
             </Button>
@@ -93,48 +93,16 @@ const colors = ref([
 const selectedSize = ref('XS');
 const sizes = ref(['XS', 'S' ,'M' ,'L' ,'XL']);
 
-const index = ref(0);
-const img = ref();
-const images = ref([{
-        id: 1,
-        src: "Klothes1-1.png",
-        alt: "t-shirt-white"
-    },
-    {
-        id: 2,
-        src: "../assets/image/product1/Klothes1-2.png",
-        alt: "t-shirt-pink"
-    },
-    {
-        id: 3,
-        src: "../assets/image/product1/Klothes1-3.png",
-        alt: "t-shirt-purple"
-    },
-    {
-        id: 4,
-        src: "../assets/image/product1/Klothes1-4.png",
-        alt: "t-shirt-cream"
-    },
-    {
-        id: 5,
-        src: "../assets/image/product1/Klothes1-5.png",
-        alt: "t-shirt-black"
-    },
-    {
-        id: 6,
-        src: "../assets/image/product1/Klothes1-6.png",
-        alt: "t-shirt-green"
-    },
-    {
-        id: 7,
-        src: "../assets/image/product1/Klothes1-7.png",
-        alt: "t-shirt-navy"
-    }
-    ])
+const dataDetail1 = ref([
+    {name: t('t-shirt'),
+    color: selectedColor.name,
+    size: selectedSize,
+    price: 10
+}
+])
 
-const switchImage = () =>{
-    img.value = images.value[index.value];
-    index.value = (index.value + 1) % images.value.length;
+const pushDataDetail1 = () =>{
+    console.log(dataDetail1.value)
 }
 </script>
 
