@@ -1,4 +1,7 @@
 <template>
+
+
+    
     <div style="padding-left: 5%">
         <h1>{{t('t-shirt')}}</h1>
     </div>  
@@ -33,7 +36,7 @@
                 <h2>{{t('price')}}</h2>
             </div>
             <div style="text-align: left">
-                <Button class="p-button-google p-3" aria-label="Purchase" @click="pushDataDetail1()">
+                <Button class="p-button-google p-3" aria-label="Purchase" @click="checkSelect()">
                 <i class="pi pi-shopping-cart px-2"></i>
                 <span class="px-3">Purchase</span>
             </Button>
@@ -49,6 +52,8 @@ import { useI18n } from "vue-i18n";
 import Dropdown from 'primevue/dropdown';
 import SelectButton from 'primevue/selectbutton';
 import Button from 'primevue/button';
+
+
 const { t } = useI18n();
 
 const selectedColor = ref();
@@ -100,6 +105,15 @@ const dataDetail1 = ref([
     price: 10
 }
 ])
+
+const checkSelect = () =>{
+    if(!selectedColor){
+        pushDataDetail1()
+    }
+    else{
+        alert('Plese selecte color');
+    }
+}
 
 const pushDataDetail1 = () =>{
     console.log(dataDetail1.value)
