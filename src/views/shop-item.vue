@@ -8,17 +8,12 @@
       <CardComponent class="card" on-click="" on-pointerover="">
         <template #title
           ><div style="text-align: center">
-            <p style="margin: 0px">{{t('t-shirt')}}</p>
+            <p style="margin: 0px">{{t('t-shirt')}}</p><br>
             <img src="../assets/image/product1/Klothes1-1.png" alt="t-shirt" style="width: 70%" />
           </div>
         </template>
         <template #content>
-          <div
-            style="text-align: center; padding: 0px; margin-top: -20px"
-            class="pt-0"
-          >
-            <p style="margin: 0px">Cat is not for sale</p>
-          </div>
+
           
           <div
             style="
@@ -47,17 +42,12 @@
       <CardComponent class="card" on-click="" on-pointerover="">
         <template #title
           ><div style="text-align: center">
-            <p style="margin: 0px">{{t('dresses')}}</p>
+            <p style="margin: 0px">{{t('dresses')}}</p><br>
             <img src="../assets/image/product2/Klothes2-1.png" alt="cat" style="width: 70%" />
           </div>
         </template>
         <template #content>
-          <div
-            style="text-align: center; padding: 0px; margin-top: -20px"
-            class="pt-0"
-          >
-            <p style="margin: 0px">Cat is not for sale</p>
-          </div>
+  
           
           <div
             style="
@@ -86,17 +76,11 @@
       <CardComponent class="card" on-click="" on-pointerover="">
         <template #title
           ><div style="text-align: center">
-            <p style="margin: 0px">{{t('polo')}}</p>
+            <p style="margin: 0px">{{t('polo')}}</p><br>
             <img src="../assets/image/product3/Klothes3-1.png" alt="cat" style="width: 70%" />
           </div>
         </template>
         <template #content>
-          <div
-            style="text-align: center; padding: 0px; margin-top: -20px"
-            class="pt-0"
-          >
-            <p style="margin: 0px">Cat is not for sale</p>
-          </div>
           
           <div
             style="

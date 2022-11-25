@@ -25,33 +25,33 @@ const localeList = ref([
   },
   {
     code: "jp",
-    label:"日本語",
+    label: "日本語",
   },
   {
-    code:"cn",
-    label:"汉语",
-  }
+    code: "cn",
+    label: "汉语",
+  },
 ]);
 
-// const currencyCurrent = ref();
-// const currencyList = ref([
-//   {
-//     code: "THB",
-//     label: "THB",
-//   },
-//   {
-//     code: "USD",
-//     label: "USD",
-//   },
-//   {
-//     code: "JPY",
-//     label:"JPY",
-//   },
-//   {
-//     code:"CNY",
-//     label:"CNY",
-//   }
-// ]);
+const currencyCurrent = ref();
+const currencyList = ref([
+  {
+    code: "THB",
+    label: "THB",
+  },
+  {
+    code: "USD",
+    label: "USD",
+  },
+  {
+    code: "JPY",
+    label:"JPY",
+  },
+  {
+    code:"CNY",
+    label:"CNY",
+  }
+]);
 //test
 const updateLocale = (event) => {
   locale.value = event.value.code;
@@ -83,102 +83,63 @@ const items = ref([]);
 </script>
 
 <template>
-
-    <div>
+  <div>
+    <div class="menu">
       <MenubarComponent :model="items">
         <template #start>
           <img
             alt="logo"
-            src="../src/assets/image/Klothes_logo.png"
+            src="../src/assets/image/Klothes_logo1.png"
             height="40"
             class="mr-2"
           />
         </template>
         <template #end>
-          <!-- <DropdownComponent
-     :options="currencyList"
-     v-model="currencyCurrent"
-            optionLabel="label"
-            placeholder="Currency"
-            style="height: 40px"
-            @change="currencyLocale"
-      /> -->
-          <DropdownComponent
-     :options="localeList"
-     v-model="localeCurrent"
-            optionLabel="label"
-            placeholder="Language"
-            style="height: 40px"
-            @change="updateLocale"
-      />
+          <div class="flex">
+            <div style="display:block">
+              <span>
+                <img
+                  src="./assets/image/money.png"
+                  alt=""
+                  style="height: 40px;"
+                />
+              </span>
+              <span class="pl-2">
+                <DropdownComponent
+                  :options="currencyList"
+                  v-model="currencyCurrent"
+                  optionLabel="label"
+                  placeholder="Currency"
+                  style="height: 40px; width: 140px; background: none; border: none;"
+                  @change="currencyLocale"
+                />
+              </span>
+            </div>
+
+            <div class="pl-5">
+              <span>
+                <img
+                  src="./assets/image/language.png"
+                  alt=""
+                  style="height: 40px"
+                />
+              </span>
+              <span class="pl-2 font-white">
+                <DropdownComponent
+                  :options="localeList"
+                  v-model="localeCurrent"
+                  optionLabel="label"
+                  placeholder="Language"
+                  style="height: 40px; width: 140px; background: none; border: none;"
+                  @change="updateLocale"
+                />
+              </span>
+            </div>
+          </div>
         </template>
       </MenubarComponent>
     </div>
-  <!-- header> -->
-  <!-- <div style="width: 100% !important" class="menu">
-    <MenubarComponent :model="items" style="height: 50px">
-      <template #start>
-        <div class="flex">
-          <ButtonComponent
-            icon="pi pi-align-left "
-            class="mr-5 menu"
-            style="border: none; font-size: 2rem; height: 40px; margin-top: 7px"
-            @click="visibleLeft = true"
-          />
-          <SidebarComponent v-model:visible="visibleLeft" :baseZIndex="10000">
-            <h1>klothes</h1>
-            <router-link to="/" style="text-decoration: none">
-              <h3>HOME</h3>
-            </router-link>
-            <router-link to="/shop" style="text-decoration: none">
-              <h3>SHOP</h3>
-            </router-link>
-          </SidebarComponent>
-
-          <router-link to="/" style="text-decoration: none">
-            <div class="mr-5" style="margin-top: 7px">
-              <img
-                alt="logo"
-                src="../src/assets/image/Klothes.png"
-                height="40"
-              />
-            </div>
-          </router-link>
-
-          <router-link to="/" style="text-decoration: none">
-            <div class="name">Klothes</div>
-          </router-link>
-        </div>
-      </template>
-      <template #end>
-        <div>
-          <i class="pi pi-globe mr-2" style="font-size: 2rem; color: white"></i>
-          <DropdownComponent
-            v-model="localeCurrent"
-            :options="localeList"
-            optionLabel="label"
-            placeholder="Language"
-            style="height: 40px"
-            @change="updateLocale"
-          />
-        </div>
-      </template>
-    </MenubarComponent>  -->
-  
-
-  <!-- <Button label="Submit" icon="pi pi-check" iconPos="right" /> -->
-  <!-- <MenubarComponent>
-      <template #start>
-        dd
-      </template>
-    </MenubarComponent> -->
-  <!-- </div> -->
-  <!--</header> -->
-
-  <header>
-    <!-- <Home></Home> -->
-    <!-- <p>1234 {{t('klothes')}}</p> -->
-  </header>
+  </div>
 
   <RouterView />
 </template>
@@ -192,6 +153,15 @@ const items = ref([]);
   color: #2c3e50;
 }
 
+/* .styledropdown {
+  background-color: #7f669d !important;
+  color: white !important;
+  font-style: italic !important; 
+} */
+.font-white{
+  color: white;
+  justify-content: center;
+}
 .menu {
   background-color: #7f669d;
   font: white;
