@@ -31,7 +31,7 @@
                 <h2>{{t('price')}}</h2>
             </div>
             <div style="text-align: left">
-                <Button class="p-button-google p-3" aria-label="Purchase" @click="checkSelect()">
+                <Button class="p-button-google p-3" aria-label="Purchase" @click="pushDataDetail2()">
                 <i class="pi pi-shopping-cart px-2"></i>
                 <span class="px-3">Purchase</span>
             </Button>
@@ -77,18 +77,10 @@ const dataDetail2 = ref([
     size: selectedSize,
     price: 10
 }
-])
-const checkSelect = () =>{
-    if(!selectedColor){
-        pushDataDetail1()
-        alert('Success');
-    }
-    else{
-        alert('Plese selecte color');
-    }
-} 
+]) 
 const pushDataDetail2 = () =>{
-    console.log(dataDetail2.value)
+    console.log(dataDetail2.value);
+    alert('Success');
 }
 </script>
 
